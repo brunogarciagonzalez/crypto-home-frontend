@@ -5,9 +5,9 @@
 
 document.addEventListener("DOMContentLoaded", ()=>{
   generateChart("Bitcoin", "bitcoinDiv");
-  generateChart("Ethereum", "ethereumDiv");
-  generateChart("Ripple", "rippleDiv");
-  
+  // generateChart("Ethereum", "bitcoinDiv");
+  generateChart("Ripple", "bitcoinDiv");
+
 });
 
 // fetch("https://api.coindesk.com/v1/epi/currentprice.json").then(response => response.json())

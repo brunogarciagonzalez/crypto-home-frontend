@@ -4,8 +4,10 @@
 // how to turn data into chart? => js library?
 
 document.addEventListener("DOMContentLoaded", ()=>{
-
-  generateChart("ethereum");
+  generateChart("Bitcoin", "bitcoinDiv");
+  generateChart("Ethereum", "ethereumDiv");
+  generateChart("Ripple", "rippleDiv");
+  
 });
 
 // fetch("https://api.coindesk.com/v1/epi/currentprice.json").then(response => response.json())

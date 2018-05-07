@@ -1,8 +1,9 @@
 function generateChart (coinStr, domId) {
   let title = coinStr;
   let divId = domId;
+  Plotly.purge(domId);
   let dictionary = {
-    "Bitcoin": "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=1000",
+    "Bitcoin": "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=100",
     "Ethereum": "https://min-api.cryptocompare.com/data/histoday?fsym=ETH&tsym=USD&limit=1000",
     "Ripple": "https://min-api.cryptocompare.com/data/histoday?fsym=XRP&tsym=USD&limit=200"
   };
@@ -16,14 +17,27 @@ function generateChart (coinStr, domId) {
     for (var index in parsedJson.Data) {
       let current = parsedJson.Data[index];
       let temp = {"time": unixTSConvert(current.time),
-                  "open": current.open, 
+                  "open": current.open,
                   "high": current.high,
-                  "low": current.low, 
+                  "low": current.low,
                   "close": current.close };
       ohlcArray.push(temp);
     };
     drawChart(ohlcArray);
   })
+  .then(response => {
+    // add nav event listeners
+    let nav = document.getElementById("nav");
+    nav.addEventListener("click", e=>handleNavEvents(e));
+  })
+
+  function handleNavEvents(event) {
+    // make sure clicked on a nav item via ".nav-item"
+    // use nav item id to conclude which item clicked on
+    if (event.target.classList.contains("nav-item")) {
+      generateChart(event.target.id, divId);
+    }
+  }
 
   function drawChart (ohlcArray) {
     let data = getChartData(ohlcArray, ['open', 'close', 'high', 'low']);

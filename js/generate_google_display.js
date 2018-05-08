@@ -3,7 +3,7 @@ function generateGoogleDisplay () {
   let mainDiv = document.getElementById("mainDiv");
   // add Google form with image
   console.log("generateGoogleDisplay")
-  mainDiv.innerHTML =  "<center id='googleCenter'><img align='center' src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'><form action='http://www.google.com/search' class='searchform' method='get' name='searchform' target='_blank'><input autocomplete='on' class='form-controls search' name='q' placeholder='Search via Google' required='required'  type='text'><button class='button' type='submit'>Search</button></form></center>"
+  mainDiv.innerHTML =  "<center id='googleCenter'><img src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'><form action='http://www.google.com/search' class='searchform' method='get' name='searchform' target='_blank'><input autocomplete='on' class='form-controls search' name='q' placeholder='Search via Google' required='required'  type='text'><button class='button' type='submit'>Search</button></form></center>"
 
 };
 

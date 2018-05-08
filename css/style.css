@@ -1,0 +1,41 @@
+h2 {
+  font-family: 'Open Sans';
+  font-size: 50px;
+  font-weight: bold;
+  color:#01161E;
+  background-color: black;
+  color: white;
+  margin-bottom: 0px;;
+}
+
+.nav ul{
+  list-style-type: none;
+}
+
+
+.nav-item {
+  text-align: center;
+  font-family: 'Open Sans';
+  font-size: 30px;
+  font-weight: bold;
+  color:#AEC3B0;
+  cursor: default;
+}
+
+.nav-item:hover {
+  color:#01161E;
+}
+
+.col-md-8 {
+  background-color: #AEC3B0;
+  text-align: center;
+  overflow: auto;
+}
+
+.col-md-2 {
+  background-color: #124559;
+}
+
+.main-row {
+  height: 600px;
+}

@@ -1,3 +1,3 @@
 function initializeDom(){
-	generateChart("Bitcoin", "mainDisplayDiv");
+	generateCharts("Bitcoin", "historyDiv", "volumeDiv");
 }

@@ -1,7 +1,8 @@
-function generateChart (coinStr, domId) {
+function generateCharts (coinStr, historyId, volumeId) {
   let title = coinStr;
-  let divId = domId;
-  Plotly.purge(domId);
+  let historyDiv = historyId;
+  let volumeDiv = volumeId;
+  Plotly.purge(historyId);
   let ohlcArray = [];
   let adapter = new APIAdapter(coinStr);
 
@@ -17,7 +18,8 @@ function generateChart (coinStr, domId) {
       return parsedJson;
     })
     .then(response =>{
-      drawHistory(title, divId, ohlcArray);
+      drawHistory(title, historyDiv, ohlcArray);
+      drawVolume(title, volumeDiv, ohlcArray);
       return response;
     })
     .then(response => {
@@ -27,17 +29,18 @@ function generateChart (coinStr, domId) {
     });
 
   function handleNavEvents(event) {
+    event.stopPropagation();
     // make sure clicked on a nav item via ".nav-item"
     // use nav item id to conclude which item clicked on
     if (event.target.classList.contains("nav-item")) {
       if (event.target.id != "Google"){
-        clearMainDisplayDiv();
-        generateChart(event.target.id, divId);
+          clearMainDiv();
+          generateCharts(event.target.id, historyDiv, volumeDiv);
       } else {
         // if it enters this else statement, then the event target is Google button
         // call generateGoogleDisplay
-        clearMainDisplayDiv();
-        generateGoogleDisplay();
+          clearMainDiv();
+          generateGoogleDisplay();
       }
     }
   }

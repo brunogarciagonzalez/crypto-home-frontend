@@ -10,7 +10,7 @@ function generateCharts (coinStr, historyId, volumeId) {
     .then(response => response.json())
     .then(parsedJson => {
       parsedJson.Data.forEach((day)=>{
-        let temp = new Ohlc(title, day.time, day.open, 
+        let temp = new Ohlc(title, day.time, day.open,
                             day.high, day.low, day.close,
                             day.volumefrom, day.volumeto);
         ohlcArray.push(temp);
@@ -29,11 +29,18 @@ function generateCharts (coinStr, historyId, volumeId) {
     });
 
   function handleNavEvents(event) {
+    event.stopPropagation();
     // make sure clicked on a nav item via ".nav-item"
     // use nav item id to conclude which item clicked on
     if (event.target.classList.contains("nav-item")) {
       if (event.target.id != "Google"){
-        generateCharts(event.target.id, historyDiv);
+          clearMainDiv();
+          generateCharts(event.target.id, historyDiv, volumeDiv);
+      } else {
+        // if it enters this else statement, then the event target is Google button
+        // call generateGoogleDisplay
+          clearMainDiv();
+          generateGoogleDisplay();
       }
     }
   }

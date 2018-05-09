@@ -1,4 +1,4 @@
-function initializeDom(){
-	generateCharts("Bitcoin", "historyDiv", "volumeDiv");
+function initializeDom(memo){
+	generateCharts("Bitcoin", "historyDiv", "volumeDiv", memo);
 }
 

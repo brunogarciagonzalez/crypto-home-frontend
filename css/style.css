@@ -8,23 +8,58 @@ h2 {
   margin-bottom: 0px;
 }
 
-.header-row{
-  background-color: black; 
+.header-row {
+  background-color: black;
 }
 
-.login-button{
-  display: inline-block;
-  float: right;
+.header-row .col-md-6{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.header-row .col-md-3 {
+  padding-left: 0px;
+  padding-right: 0px;
+  transform: translate(0%, 25%);
+}
+
+#login-input {
+  width: 55%;
+  margin-right: 2%;
+}
+
+#login-button{
+  width: 35%;
+  margin-right: 5%;
+  background-color: #AEC3B0;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+#login-button:focus {
+
+}
+
+#login-button:hover {
+  color: #124559;
+}
+
+#login-button:active {
+  color: white;
+  background-color: #124559;
+}
+
+.nav, .chat {
+  background-color: #124559;
 }
 
 .nav ul{
   list-style-type: none;
 }
 
-
 .nav-item {
   text-align: center;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-size: 30px;
   font-weight: bold;
   color:#AEC3B0;
@@ -41,14 +76,7 @@ h2 {
   overflow: auto;
 }
 
-.header-row .col-md-8{
-  padding-left: 0px;
-  padding-right: 0px;
-}
 
-.nav, .chat {
-  background-color: #124559;
-}
 
 .main-row {
   height: 600px;

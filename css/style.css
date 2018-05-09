@@ -28,7 +28,7 @@ h2 {
   margin-right: 2%;
 }
 
-#login-button{
+#login-container button{
   width: 35%;
   margin-right: 5%;
   background-color: #AEC3B0;
@@ -36,26 +36,22 @@ h2 {
   color: white;
 }
 
-#login-button:focus {
 
+#login-container p{
+  color:white;
 }
 
-#login-button:hover {
+#login-container button:active{
+  background-color: #124559;
+  color: white;
+}
+
+#login-container button:hover{
   color: #124559;
 }
 
-#login-button:active {
-  color: white;
-  background-color: #124559;
-}
-
-#logout-button:hover {
-  color: #124559;
-}
-
-#logout-button:active {
-  color: white;
-  background-color: #124559;
+.invisible{
+  display: none;
 }
 
 .nav, .chat {
@@ -84,7 +80,6 @@ h2 {
   text-align: center;
   overflow: auto;
 }
-
 
 
 .main-row {

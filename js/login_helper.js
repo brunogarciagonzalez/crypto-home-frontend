@@ -1,9 +1,9 @@
 // add event listener to login button
-(function () {
   let globalCurrentUser;
   let loginButton = document.getElementById("login-button");
+  let logoutButton = document.getElementById("logout-button");
   loginButton.addEventListener("click", event => loginHandler(event));
-  
+
   function loginHandler (event) {
     // get input field
     let loginInput = document.getElementById("login-input");
@@ -14,6 +14,8 @@
         loginFetch(loginInput.value)
           .then(loginAttempt => {
             loginAttempt === "Failure"? resetLogin() : loginDOM(loginAttempt);
+            let logoutButton = document.getElementById("logout-button");
+            logoutButton.addEventListener("click", event => console.log("logout"));
           })
           // global 'currentUserId' = id of user
             // whose username was in input field
@@ -33,14 +35,29 @@
 
   function loginDOM(currentUser){
       globalCurrentUser = currentUser;
-      let loginButton = document.getElementById("login-button");
-      loginButton.id = "logout-button";
-      loginButton.innerHTML = "LOGOUT";
-      debugger;
-      alert(JSON.stringify(currentUser));
+      switchButtons();
+      addNameToDOM(currentUser);
+      //add event listener to logout button
   }
 
-  
+  function addNameToDOM(currentUser){
+    let loginContainer = document.getElementById("login-container");
+    let loginInput = document.getElementById("login-input");
+    loginInput.remove();
+    loginContainer.innerHTML = `<p style="display: inline-block">Welcome, ${currentUser.username} </p>` + 
+                               loginContainer.innerHTML;
+  }
+  function switchButtons(){
+      let loginButton = document.getElementById("login-button");
+      let logoutButton = document.getElementById('logout-button');
+      if(loginButton.classList.contains("invisible")){
+          loginButton.classList.remove("invisible");
+          logoutButton.classList.add("invisible");
+      }else{
+          logoutButton.classList.remove("invisible");
+          loginButton.classList.add("invisible");
+      }
+  }
 
   function loginFetch (username) {
     let apiUrl = "http://localhost:3000/signin";
@@ -51,4 +68,3 @@
       });
   }; // <-- end of loginFetch()
 
-})()

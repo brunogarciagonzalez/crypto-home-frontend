@@ -1,3 +1,4 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-	initializeDom();
+	memo = {};
+	initializeDom(memo);
 });

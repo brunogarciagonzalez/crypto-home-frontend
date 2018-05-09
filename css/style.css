@@ -5,7 +5,16 @@ h2 {
   color:#01161E;
   background-color: black;
   color: white;
-  margin-bottom: 0px;;
+  margin-bottom: 0px;
+}
+
+.header-row{
+  background-color: black; 
+}
+
+.login-button{
+  display: inline-block;
+  float: right;
 }
 
 .nav ul{
@@ -32,7 +41,12 @@ h2 {
   overflow: auto;
 }
 
-.col-md-2 {
+.header-row .col-md-8{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.nav, .chat {
   background-color: #124559;
 }
 

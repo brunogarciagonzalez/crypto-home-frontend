@@ -49,6 +49,15 @@ h2 {
   background-color: #124559;
 }
 
+#logout-button:hover {
+  color: #124559;
+}
+
+#logout-button:active {
+  color: white;
+  background-color: #124559;
+}
+
 .nav, .chat {
   background-color: #124559;
 }

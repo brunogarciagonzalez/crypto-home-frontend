@@ -5,4 +5,5 @@ document.addEventListener("DOMContentLoaded", ()=>{
 	logger.initializeLoginEvent();
 	initMessages();
 	initializePostButton();
+	initializeUTC();
 });

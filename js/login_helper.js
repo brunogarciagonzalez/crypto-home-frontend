@@ -5,26 +5,25 @@
     loginButton.addEventListener("click", event => loginHandler(event));
   }
 
-  function initializeLoginEvent(){
-    
+  function initializeLogoutEvent(){
+    let logoutButton = document.getElementById("logout-button");
+    logoutButton.addEventListener("click", event => logoutHandler(event));    
   }
 
-
   function loginHandler (event) {
-    // get input field
     let loginInput = document.getElementById("login-input");
-    // errors: empty?
     if (loginInput.value.length < 1) {
       alert("Please enter username.")
     }else { //login
         loginFetch(loginInput.value)
-          .then(loginAttempt => {  // errors: valid username? 
-            loginAttempt === "Failure"? resetLogin() : loginDOM(loginAttempt);
-            let logoutButton = document.getElementById("logout-button");
-            logoutButton.addEventListener("click", event => logoutHandler(event));
+          .then(loginAttempt => { 
+            if(loginAttempt === "Failiure"){
+              resetLogin();
+            }else{
+              loginDOM(loginAttempt);
+              initializeLogoutEvent();
+            }
           })
-          // global 'currentUserId' = id of user
-            // whose username was in input field
     }
   }; // <-- end of loginHandler()
 
@@ -82,8 +81,6 @@
 
 
 
-// ********************** Actions, for now *************************
-initializeLoginEvent();
 
 
 

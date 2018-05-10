@@ -1,7 +1,5 @@
-// add event listener to login button
   let globalCurrentUser;
   let loginButton = document.getElementById("login-button");
-  let logoutButton = document.getElementById("logout-button");
   loginButton.addEventListener("click", event => loginHandler(event));
 
   function loginHandler (event) {
@@ -12,18 +10,14 @@
       alert("Please enter username.")
     }else { //login
         loginFetch(loginInput.value)
-          .then(loginAttempt => {
+          .then(loginAttempt => {  // errors: valid username? 
             loginAttempt === "Failure"? resetLogin() : loginDOM(loginAttempt);
             let logoutButton = document.getElementById("logout-button");
             logoutButton.addEventListener("click", event => console.log("logout"));
           })
           // global 'currentUserId' = id of user
             // whose username was in input field
-          // add 'welcome <user>' in place of input field
-            // and logout button
     }
-    // errors: valid username?
-
   }; // <-- end of loginHandler()
 
   function resetLogin(){
@@ -37,7 +31,6 @@
       globalCurrentUser = currentUser;
       switchButtons();
       addNameToDOM(currentUser);
-      //add event listener to logout button
   }
 
   function addNameToDOM(currentUser){

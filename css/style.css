@@ -85,3 +85,17 @@ h2 {
 .main-row {
   height: 600px;
 }
+
+.chat-div {
+  height: 70%;
+  background-color: white;
+  margin-bottom: 3%;
+}
+
+.new-message-div {
+  height: 25%;
+}
+
+textarea {
+  resize: none;
+}

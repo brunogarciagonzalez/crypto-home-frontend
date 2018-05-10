@@ -75,7 +75,7 @@ h2 {
   color:#01161E;
 }
 
-.col-md-8 {
+.col-md-7 {
   background-color: #AEC3B0;
   text-align: center;
   overflow: auto;
@@ -87,13 +87,38 @@ h2 {
 }
 
 .chat-div {
-  height: 70%;
+  height: 88%;
   background-color: white;
   margin-bottom: 3%;
+  overflow: auto;
+  margin-right: 25px;
 }
 
 .new-message-div {
   height: 25%;
+}
+
+#message-button{
+    position: absolute;
+    margin-left: 8px;
+    /*margin-bottom: 200px;*/
+}
+
+#chat-box{
+  list-style-type: none;
+}
+
+.msg{
+  display: block;
+  font-weight: bold;
+}
+
+.date{
+  display: block;
+}
+
+.user{
+  color: #cc33ff;
 }
 
 textarea {

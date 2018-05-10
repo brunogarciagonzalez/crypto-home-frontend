@@ -3,4 +3,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
 	initializeDom(memo);
 	let logger = new DoLogin();
 	logger.initializeLoginEvent();
+	initMessages();
+	initMessageForm();
 });

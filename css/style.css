@@ -81,7 +81,9 @@ h2 {
   overflow: auto;
 }
 
-
+#historyDiv {
+  margin-top: 25px;
+}
 .main-row {
   height: 600px;
 }
@@ -90,7 +92,7 @@ h2 {
   height: 88%;
   background-color: white;
   margin-bottom: 3%;
-  overflow: auto;
+  overflow-y: auto;
   margin-right: 25px;
 }
 
@@ -108,6 +110,18 @@ h2 {
   list-style-type: none;
 }
 
+#google-image {
+  height:50%;
+}
+
+#google-button {
+  margin-left: 10px;
+}
+
+#googleCenter {
+  margin-top: 100px;
+  height: 400px;
+}
 .msg{
   display: block;
   font-weight: bold;

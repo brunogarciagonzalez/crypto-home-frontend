@@ -7,7 +7,7 @@
 
   function initializeLogoutEvent(){
     let logoutButton = document.getElementById("logout-button");
-    logoutButton.addEventListener("click", event => logoutHandler(event));    
+    logoutButton.addEventListener("click", event => logoutHandler(event));
   }
 
   function loginHandler (event) {
@@ -16,7 +16,7 @@
       alert("Please enter username.")
     }else { //login
         loginFetch(loginInput.value)
-          .then(loginAttempt => { 
+          .then(loginAttempt => {
             if(loginAttempt === "Failiure"){
               resetLogin();
             }else{
@@ -39,7 +39,7 @@
 
   function resetLogin(){
     let loginInput = document.getElementById("login-input");
-    loginInput.value = ""; 
+    loginInput.value = "";
     alert("Incorrect Login!");
     loginInput.focus();
   }
@@ -55,7 +55,7 @@
     let loginContainer = document.getElementById("login-container");
     let loginInput = document.getElementById("login-input");
     loginInput.remove();
-    loginContainer.innerHTML = `<p id = "welcome-msg" style="display: inline-block">Welcome, ${currentUser.username} </p>` + 
+    loginContainer.innerHTML = `<p id = "welcome-msg" style="display: inline-block">Welcome, ${currentUser.username} </p>` +
                                loginContainer.innerHTML;
   }
   function switchButtons(){
@@ -72,15 +72,8 @@
   function loginFetch (username) {
     let apiUrl = "http://localhost:3000/signin";
     let fullApiUrl = apiUrl + "?username=" + username;
-    return fetch(fullApiUrl, { method: "POST" })
+    return fetch(fullApiUrl, { method: "GET" })
       .then(response => {
         return response.status === 200? response.json() : "Failure";
       });
   }; // <-- end of loginFetch()
-
-
-
-
-
-
-

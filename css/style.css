@@ -1,26 +1,33 @@
 
 :root {
-    --nav-options-color:#AEC3B0;
-    --nav-options-hover-color: #01161E;
+    --nav-options-color:#FFFFFF;
+    --nav-options-hover-color: white;
     --nav-options-active-color: white;
     /* --nav-background-color: #124559;
     --chat-background-color:#124559; */
-    --side-cols-color: #124559;
-    --charts-background-color: #AEC3B0;
+    --charts-background-color: #FEFFFE;
+}
+
+.ticker__item {
+  color: red;
+}
+
+body {
+    border: 1px solid transparent;
+    background-color: #13547a;
 }
 
 h2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 50px;
   font-weight: bold;
-  color:#01161E;
   background-color: black;
   color: white;
   margin-bottom: 0px;
 }
 
 #utc-clock {
-  margin-left: 35px;
+  margin-left: 25px;
   color: white;
   font-weight: bold;
   font-family: 'Open Sans', sans-serif;
@@ -68,7 +75,7 @@ h2 {
 #login-container button{
   width: 35%;
   margin-right: 5%;
-  background-color: #AEC3B0;
+  background-color: #80d0c7;
   font-family: 'Open Sans', sans-serif;
   color: white;
   margin-bottom: 20px;
@@ -85,7 +92,7 @@ h2 {
 }
 
 #login-container button:hover{
-  color: #124559;
+  background-color: #13547a;
 }
 
 .invisible{
@@ -93,9 +100,12 @@ h2 {
 }
 
 .nav, .chat {
-  background-color: var(--side-cols-color);
+  background: linear-gradient(#80d0c7, #13547a);
 }
 
+#nav {
+  margin-top: 35%;
+}
 .chat {
   margin-right: 0px;
   margin-left: 0px;
@@ -106,6 +116,7 @@ h2 {
 }
 
 .nav-item {
+  margin-top: 15%;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-size: 30px;
@@ -116,6 +127,7 @@ h2 {
 
 .nav-item:hover {
   color: var(--nav-options-hover-color);
+  text-decoration: underline;
 }
 
 .nav-item:active {
@@ -153,12 +165,14 @@ h2 {
 }
 
 .main-row {
-  height: 600px;
+  height: 700px;
+  margin-left: 0px;
+  margin-right: -15px;
 }
 
 .chat-div {
   height: 88%;
-  background-color: white;
+  background-color: #FEFFFE;
   margin-bottom: 3%;
   overflow-y: auto;
   margin-right: 25px;
@@ -171,7 +185,8 @@ h2 {
 #message-button{
     position: absolute;
     margin-left: 8px;
-    /*margin-bottom: 200px;*/
+    height: 35px;
+    width: 100px;
 }
 
 #chat-box{

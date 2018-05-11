@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 	logger.initializeLoginEvent();
 	initMessages();
 	initializePostButton();
+	initializeUTC();
 
 	window.App = {}
 	window.App.cable = ActionCable.createConsumer("ws://localhost:3000/cable");

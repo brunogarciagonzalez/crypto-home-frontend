@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 	initializePostButton();
 	initializeUTC();
 	initializeCustomGraphOptions();
-	
+
 	window.App = {}
 	window.App.cable = ActionCable.createConsumer("ws://localhost:3000/cable");
 	window.App.messages = App.cable.subscriptions.create('MessagesChannel', {

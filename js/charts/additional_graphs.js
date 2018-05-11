@@ -47,7 +47,8 @@ function initializeCustomGraphOptions () {
           })
           return parsedJson;
         }).then(parsedJson => {
-          drawHistory(coinCurrency, historyDiv, ohlcArray);
+          let title = coinCurrency + " " + intervalStr + " " + `(Intervals: ${intervalNum})` + " " + fiatCurrency;
+          drawHistory(title, historyDiv, ohlcArray);
         });
         //clear input
         intervalNumInput.value = "";
@@ -93,13 +94,14 @@ function initializeCustomGraphOptions () {
           })
           return parsedJson;
         }).then(parsedJson => {
-          drawHistory(coinCurrency, volumeDiv, ohlcArray);
+          let title = coinCurrency + " " + intervalStr + " " + `(Intervals: ${intervalNum})` + " " + fiatCurrency;
+          drawHistory(title, volumeDiv, ohlcArray);
         });
         //clear input
         intervalNumInput.value = "";
     } else {
       intervalNumInput.value = "";
-      alert("Invalid input for Intervals to Graph!");
+      alert("Invalid input for Intervals to Graph! volume");
     }
 
 
@@ -186,5 +188,3 @@ function getTraceColor(key){
         'volumefrom': '#25D33C'
     }[key];
   }
-
-initializeCustomGraphOptions ()

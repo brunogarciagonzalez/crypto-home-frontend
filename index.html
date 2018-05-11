@@ -60,8 +60,59 @@
 
     <!-- graphs -->
     <div class ="col-md-7" id="mainDiv" style="float: center; display: inline-block;">
+
+      <div id="historyDivOptions">
+        <span>Interval: </span>
+        <select class="divOptions" id="historyInterval">
+          <option value="Daily">Daily</option>
+          <option value="Hourly">Hourly</option>
+        </select>
+        <span>Cryto Currency: </span>
+        <select class="divOptions" id="historyCrypto">
+          <option value="BTC">Bitcoin</option>
+          <option value="ETH">Ethereum</option>
+          <option value="XRP">Ripple</option>
+        </select>
+        <br>
+        <span>Displayed in Fiat Currency: </span>
+        <select class="divOptions" id="historyFiat">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+        </select>
+        <span>Intervals To Graph: </span>
+        <input class="divOptions" id="historyIntervalNum">
+        <button id="historyDivButton">Update Chart</button>
+      </div>
+
       <div id="historyDiv" style="display: inline-block;"></div>
+
+      <div id="volumeDivOptions">
+        <span>Interval: </span>
+        <select class="divOptions" id="volumeInterval">
+          <option value="Daily">Daily</option>
+          <option value="Hourly">Hourly</option>
+        </select>
+        <span>Cryto Currency: </span>
+        <select class="divOptions" id="volumeCrypto">
+          <option value="BTC">Bitcoin</option>
+          <option value="ETH">Ethereum</option>
+          <option value="XRP">Ripple</option>
+        </select>
+        <br>
+        <span>Displayed in Fiat Currency: </span>
+        <select class="divOptions" id="volumeFiat">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+        </select>
+        <span>Intervals To Graph: </span>
+        <input class="divOptions" id="volumeIntervalNum">
+        <button id="volumeDivButton">Update Chart</button>
+      </div>
+
       <div id="volumeDiv" style="display: inline-block;"></div>
+
     </div>
 
     <!-- chat -->
@@ -105,7 +156,7 @@
   <script src="js/utc_clock.js"></script>
 
   <!-- Action Cable -->
-  <script src="node_modules/actioncable-js/dist/action_cable.js"></script>  
+  <script src="node_modules/actioncable-js/dist/action_cable.js"></script>
 
   <!-- Societ io -->
     <!-- <script src="node_modules/socket.io/lib/socket.js"></script>  -->
@@ -120,6 +171,7 @@
 
   <!-- Messages JS -->
   <script src="js/messages/message_populator.js"></script>
+  <script src="js/charts/additional_graphs.js"></script>
 
 
   <!-- custom script for testing purposes -->

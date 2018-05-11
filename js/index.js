@@ -46,15 +46,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
 			}
 		}
 
-		setInterval(function(){
-			clearTicker();
-			addTicker(msgQueue);
-		}, 30000)
 		
 		if(msgQueue.length === 5){
 			once.initializeTicker(msgQueue);
 		}
 	});
+	setInterval(function(){
+		clearTicker();
+		addTicker(msgQueue);
+	}, 30000)
 
 });
 
@@ -95,7 +95,7 @@ function parsePrice(message){
 	let last24Vol = msgArr[10];
 	let lastMktPrice = msgArr[14];
 
-	let tradeStr = `${coin}: ${lastVolume} at $${lastPrice}`;
+	let tradeStr = `${coin} at $${lastPrice}`;
 	let volStr = `${coin} 24H Agg.Vol: ${last24Vol}`;
 	return {tradeStr: tradeStr, volStr:volStr};
 }
@@ -107,7 +107,7 @@ function addTicker(msgQueue){
 		let tradeStr = `<div class='ticker__item'>${element.tradeStr}</div>`
 		let volStr = `<div class='ticker__item'>${element.volStr}</div>`
 		tickerContainer.innerHTML += tradeStr;
-		tickerContainer.innerHTML += volStr;
+		// tickerContainer.innerHTML += volStr;
 	})
 }
 

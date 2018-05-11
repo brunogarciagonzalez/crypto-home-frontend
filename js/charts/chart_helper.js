@@ -8,6 +8,8 @@ class ChartHelper{
 		let data = this.getChartData(keyArr);
 	    let layout = {
 	      title: `${this.coinStr} ${keyArr.includes('volumefrom')? 'Volume' : 'Price'} Chart`,
+				paper_bgcolor: 'rgba(0,0,0,0)',
+				plot_bgcolor: 'rgba(0,0,0,0)'
 	    };
 	    Plotly.newPlot(this.domId, data, layout);
 	}

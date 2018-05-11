@@ -51,7 +51,7 @@ function monthDict (monthNum) {
 function colory() {
   let arr = document.querySelectorAll(".colory");
 
-  let color = "#AEC3B0";
+  let color = "#80d0c7";
 
   if (currentSecond() == 0) {
     for (var i = 0; i < arr.length; i++) {

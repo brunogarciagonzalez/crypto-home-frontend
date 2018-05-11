@@ -20,6 +20,7 @@ function writeMessages(messageArr){
 						 `${content}` + '</li><br>';
 		chatBox.innerHTML += messageStr;
 	})
+	chatBox.scrollIntoView(false);
 }
 
 function fetchMessages(){

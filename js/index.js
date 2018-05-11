@@ -38,8 +38,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
 	socket.on("m", function(message) {
 		var messageType = message.substring(0, message.indexOf("~"));
 		if(messageType == 5){
-			let msgArr = parsePrice(message);
-			msgQueue.push(msgArr);
+			let msgArr = message.split('~');
+			let msgObj = parsePrice(message);
+			if(msgArr[5].length < 8){
+				msgQueue.push(msgObj);
+				
+			}
 		}
 
 		setInterval(function(){

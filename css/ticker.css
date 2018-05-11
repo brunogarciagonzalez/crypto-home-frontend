@@ -22,14 +22,14 @@
   bottom: 0;
   width: 100%;
   overflow: hidden;
-  height: 4rem;
+  height: 3rem;
   background-color: rgba(0, 0, 0, 0.9);
   padding-left: 100%;
   box-sizing: content-box; }
   .ticker-wrap .ticker {
     display: inline-block;
-    height: 4rem;
-    line-height: 4rem;
+    height: 3rem;
+    line-height: 3rem;
     white-space: nowrap;
     padding-right: 100%;
     box-sizing: content-box;
@@ -39,8 +39,8 @@
     animation-timing-function: linear;
     -webkit-animation-name: ticker;
     animation-name: ticker;
-    -webkit-animation-duration: 15s;
-    animation-duration: 15s; }
+    -webkit-animation-duration: 22s;
+    animation-duration: 22s; }
     .ticker-wrap .ticker__item {
       display: inline-block;
       padding: 0 2rem;

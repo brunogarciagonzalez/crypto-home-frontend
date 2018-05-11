@@ -1,5 +1,5 @@
 * { box-sizing: border-box; }
-$duration: 15s;
+$duration: 22s;
 
 @-webkit-keyframes ticker {
   0% {
@@ -33,7 +33,7 @@ $duration: 15s;
   bottom: 0;
   width: 100%;
   overflow: hidden;
-  height: 4rem;
+  height: 3rem;
   background-color: rgba(#000, 0.9); 
   padding-left: 100%;
   box-sizing: content-box;
@@ -41,8 +41,8 @@ $duration: 15s;
   .ticker {
 
     display: inline-block;
-    height: 4rem;
-    line-height: 4rem;  
+    height: 3rem;
+    line-height: 3rem;  
     white-space: nowrap;
     padding-right: 100%;
     box-sizing: content-box;

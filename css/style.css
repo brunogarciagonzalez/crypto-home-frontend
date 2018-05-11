@@ -70,6 +70,7 @@ h2 {
   background-color: #AEC3B0;
   font-family: 'Open Sans', sans-serif;
   color: white;
+  margin-bottom: 20px;
 }
 
 
@@ -178,3 +179,9 @@ h2 {
 textarea {
   resize: none;
 }
+
+
+
+/****************Ticker Bar*****************/
+
+

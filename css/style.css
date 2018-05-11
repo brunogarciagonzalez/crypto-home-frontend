@@ -1,3 +1,4 @@
+
 :root {
     --nav-options-color:#AEC3B0;
     --nav-options-hover-color: #01161E;
@@ -95,6 +96,11 @@ h2 {
   background-color: var(--side-cols-color);
 }
 
+.chat {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
 .nav ul{
   list-style-type: none;
 }
@@ -120,11 +126,32 @@ h2 {
   background-color: var(--charts-background-color);
   text-align: center;
   overflow: auto;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 #historyDiv {
-  margin-top: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
+
+#volumeDiv {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#historyDivOptions {
+  margin-top: 25px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+#volumeDivOptions {
+  margin-top: 25px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
 .main-row {
   height: 600px;
 }
@@ -183,5 +210,3 @@ textarea {
 
 
 /****************Ticker Bar*****************/
-
-

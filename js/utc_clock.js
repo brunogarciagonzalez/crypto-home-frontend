@@ -59,7 +59,7 @@ function colory() {
     }
   } else {
     for (var i = 0; i < arr.length; i++) {
-      arr[i].style.color = white;
+      arr[i].style.color = "white";
     }
   }
 

@@ -1,7 +1,7 @@
 class ChartHelper{
 	constructor(coinStr, domId, ohlcArray){
-		this.coinStr = coinStr;		
-		this.domId = domId;		
+		this.coinStr = coinStr;
+		this.domId = domId;
 		this.ohlcArray = ohlcArray;
 	}
 	drawChart(keyArr){
@@ -11,10 +11,12 @@ class ChartHelper{
 	    };
 	    Plotly.newPlot(this.domId, data, layout);
 	}
+
 	getChartData(keyArr){
 	    return keyArr.map(key=>this.getTrace(key));
 	}
-  	getTrace(key){
+
+  getTrace(key){
 		return {
 	  		type: "scatter",
 	  		mode: "lines",

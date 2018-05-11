@@ -6,10 +6,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
 	initMessages();
 	initializePostButton();
 	initializeUTC();
-
+	initializeCustomGraphOptions();
+	
 	window.App = {}
 	window.App.cable = ActionCable.createConsumer("ws://localhost:3000/cable");
-	window.App.messages = App.cable.subscriptions.create('MessagesChannel', {  
+	window.App.messages = App.cable.subscriptions.create('MessagesChannel', {
 	  received: function(data) {
 		   	console.log(data);
 		   	writeMessages([data]);
